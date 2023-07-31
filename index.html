@@ -79,15 +79,23 @@
       <br>
       <div style="font-size: 9px; padding-bottom: 5px;">Email Address</div>
 
-      <!-- <br> -->
 
       <form>
 
-        <input class="email-input" type="text" placeholder="email@company.com">
+        <input class="email-input" type="text" placeholder="email@company.com"  style="font-size: 9px; color: black; font-weight: 400;">
 
 
       </form>
-        <button class="button">Subscribe to the monthly newsletter</button>
+        <button class="button" onclick="gotoThanksPage()">Subscribe to the monthly newsletter</button>
+
+
+
+        <script>
+          function gotoThanksPage(){
+
+            window.location = "thanks.html";
+          }
+        </script>
     </div>
 
     <div class="section2">
