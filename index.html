@@ -36,6 +36,12 @@
 
   <link rel="stylesheet" href="styles.css">
 
+
+  <script>
+    // Define a global variable
+    let email_address = "";
+  </script>
+
 </head>
 <body>
 
@@ -82,10 +88,21 @@
 
       <form>
 
-        <input class="email-input" type="text" placeholder="email@company.com"  style="font-size: 9px; color: black; font-weight: 400;">
+        <input class="email-input" id="email-input" type="text" placeholder="email@company.com"  style="font-size: 9px; color: black; font-weight: 400;" onchange="setEmail()">
 
 
       </form>
+
+      <script>
+        function setEmail(){
+
+          const inputField = document.getElementById('email-input');
+
+          email_address = inputField.value;
+        }
+      </script>
+
+
         <button class="button" onclick="gotoThanksPage()">Subscribe to the monthly newsletter</button>
 
 
@@ -93,7 +110,7 @@
         <script>
           function gotoThanksPage(){
 
-            window.location = "thanks.html";
+            window.location = "thanks.html?value=" + email_address;
           }
         </script>
     </div>
