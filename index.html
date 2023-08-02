@@ -91,14 +91,44 @@
         <input class="email-input" id="email-input" type="text" placeholder="email@company.com"  style="font-size: 9px; color: black; font-weight: 400;" onchange="setEmail()">
 
 
+
       </form>
+
+
+
+      <script>
+        function checkEmail(email){
+
+          // console.log("Email is given");
+          if (email.includes('@'))
+          {
+            console.log("Email has @");
+
+            return true;
+          }
+          else{
+            console.log("Email does not have @");
+            return false;
+          }
+        }
+      </script>
 
       <script>
         function setEmail(){
 
           const inputField = document.getElementById('email-input');
 
+
           email_address = inputField.value;
+          let checker = checkEmail(email_address);
+
+          if (!checker)
+          {
+            inputField.style.borderColor = 'red';
+
+            inputField.style.backgroundColor  = 'hsl(5,100%,95%)';
+            inputField.style.color = 'red';
+          }
         }
       </script>
 
