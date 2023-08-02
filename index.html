@@ -128,12 +128,13 @@
 
             inputField.style.backgroundColor  = 'hsl(5,100%,95%)';
             inputField.style.color = 'red';
+            document.getElementById("subscribe-button").disabled = true;
           }
         }
       </script>
 
 
-        <button class="button" onclick="gotoThanksPage()">Subscribe to the monthly newsletter</button>
+        <button class="button" id="subscribe-button" onclick="gotoThanksPage()">Subscribe to the monthly newsletter</button>
 
 
 
