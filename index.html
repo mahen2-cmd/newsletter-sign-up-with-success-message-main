@@ -116,17 +116,18 @@
             return true;
 
 
+          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
           if (email.includes('@'))
           {
             console.log("Email has @");
 
-            return true;
+            return regex.test(email);
           }
           else{
             console.log("Email does not have @");
-            return false;
+            return regex.test(email);
           }
         }
       </script>
@@ -187,37 +188,6 @@
     </div>
   </div>
 
-
-
-
-
-  <!-- Sign-up form start -->
-
-  <!-- Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter -->
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  <!-- Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message -->
-
-  <!-- Success message end -->
 
   <footer>
 
