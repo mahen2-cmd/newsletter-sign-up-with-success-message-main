@@ -40,6 +40,10 @@
   <script>
     // Define a global variable
     let email_address = "";
+    window.onload = function(){
+
+      document.getElementById("zero").style.display = "none";
+    }
   </script>
 
 </head>
@@ -83,7 +87,15 @@
 
 
       <br>
-      <div style="font-size: 9px; padding-bottom: 5px;">Email Address</div>
+
+
+      <div class="horizontal-container">
+
+          <div style="font-size: 9px; padding-bottom: 5px;">Email Address</div>
+
+          <div id="zero" style="color: #ec7d6e; font-size: 9px;">Valid email required</div>
+
+      </div>
 
 
       <form>
@@ -100,6 +112,12 @@
         function checkEmail(email){
 
           // console.log("Email is given");
+          if(email == "")
+            return true;
+
+
+
+
           if (email.includes('@'))
           {
             console.log("Email has @");
@@ -130,24 +148,21 @@
             inputField.style.borderColor = 'red';
 
             inputField.style.backgroundColor  = 'hsl(5,100%,95%)';
-            inputField.style.color = 'red';
+            inputField.style.color = '#ec7d6e';
             document.getElementById("subscribe-button").disabled = true;
+            document.getElementById("zero").style.display = "block";
           }
 
           else{
-            // inputField.style.borderColor = 'red';
 
             inputField.style.backgroundColor  = 'white';
             inputField.style.color = 'black';
 
-            // inputField.style.borderColor = "1px solid hsl(231, 7%, 60%)";
             inputField.style.border = "1px solid hsl(231, 7%, 60%)";
 
+            document.getElementById("zero").style.display = "none";
 
 
-            // background-color: hsl(234, 29%, 20%);
-            // color: white;
-            // border: none;
             document.getElementById("subscribe-button").disabled = false;
 
           }

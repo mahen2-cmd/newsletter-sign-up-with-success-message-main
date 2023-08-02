@@ -60,6 +60,12 @@ body {
     font-family: 'Space Mono', monospace; */
 }
 
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+}
 
 .email-input {
     width: 230px;
