@@ -60,6 +60,13 @@ body {
     font-family: 'Space Mono', monospace; */
 }
 
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
 .horizontal-container {
     display: flex;
     flex-direction: row;
@@ -102,9 +109,6 @@ input {
     font-size: 25px;
 }
 
-/* .email-input::focus {
-    border: 2px solid black;
-} */
 
 
 
@@ -180,6 +184,7 @@ input {
 }
 
 
+
 footer {
     position: absolute;
     bottom: 0;
@@ -189,6 +194,9 @@ footer {
     text-align: center;
     color: white;
 }
+
+
+
 
 
 /* a {
