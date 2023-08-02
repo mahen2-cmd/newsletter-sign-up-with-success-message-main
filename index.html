@@ -122,6 +122,9 @@
           email_address = inputField.value;
           let checker = checkEmail(email_address);
 
+
+
+
           if (!checker)
           {
             inputField.style.borderColor = 'red';
@@ -129,6 +132,24 @@
             inputField.style.backgroundColor  = 'hsl(5,100%,95%)';
             inputField.style.color = 'red';
             document.getElementById("subscribe-button").disabled = true;
+          }
+
+          else{
+            // inputField.style.borderColor = 'red';
+
+            inputField.style.backgroundColor  = 'white';
+            inputField.style.color = 'black';
+
+            // inputField.style.borderColor = "1px solid hsl(231, 7%, 60%)";
+            inputField.style.border = "1px solid hsl(231, 7%, 60%)";
+
+
+
+            // background-color: hsl(234, 29%, 20%);
+            // color: white;
+            // border: none;
+            document.getElementById("subscribe-button").disabled = false;
+
           }
         }
       </script>
